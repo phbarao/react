@@ -1,5 +1,4 @@
-import React, { useState, useEffect, useMemo } from 'react';
-import { useCallback } from 'react';
+import React, { useState, useEffect, useMemo, useCallback } from 'react';
 
 function App() {
   // Armazenar estado de tecnologias
