@@ -1,14 +1,14 @@
 import React, { useState } from "react";
 
 const EditTodo = ({ todo }) => {
-  const [description, setDescription] = useState(todo.description);
+  const [title, setTitle] = useState(todo.title);
 
-  //edit description function
+  //edit title function
 
-  const updateDescription = async (e) => {
+  const updateTitle = async (e) => {
     e.preventDefault();
     try {
-      const body = { description };
+      const body = { title };
       const response = await fetch(
         `http://localhost:5000/todos/${todo.todo_id}`,
         {
@@ -41,7 +41,7 @@ const EditTodo = ({ todo }) => {
       <div
         class="modal"
         id={`id${todo.todo_id}`}
-        onClick={() => setDescription(todo.description)}
+        onClick={() => setTitle(todo.title)}
       >
         <div class="modal-dialog">
           <div class="modal-content">
@@ -51,7 +51,7 @@ const EditTodo = ({ todo }) => {
                 type="button"
                 class="close"
                 data-dismiss="modal"
-                onClick={() => setDescription(todo.description)}
+                onClick={() => setTitle(todo.title)}
               >
                 &times;
               </button>
@@ -61,8 +61,8 @@ const EditTodo = ({ todo }) => {
               <input
                 type="text"
                 className="form-control"
-                value={description}
-                onChange={(e) => setDescription(e.target.value)}
+                value={title}
+                onChange={(e) => setTitle(e.target.value)}
               />
             </div>
 
@@ -71,7 +71,7 @@ const EditTodo = ({ todo }) => {
                 type="button"
                 class="btn btn-warning"
                 data-dismiss="modal"
-                onClick={(e) => updateDescription(e)}
+                onClick={(e) => updateTitle(e)}
               >
                 Edit
               </button>
@@ -79,7 +79,7 @@ const EditTodo = ({ todo }) => {
                 type="button"
                 class="btn btn-danger"
                 data-dismiss="modal"
-                onClick={() => setDescription(todo.description)}
+                onClick={() => setTitle(todo.title)}
               >
                 Close
               </button>

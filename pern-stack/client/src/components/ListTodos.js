@@ -42,7 +42,16 @@ const ListTodos = () => {
       <table class="table mt-5 text-center">
         <thead>
           <tr>
-            <th>Description</th>
+            <th>Date</th>
+            <th>Amount</th>
+            <th>Title</th>
+            <th>Dentist</th>
+            <th>Clinic</th>
+            <th>Patient</th>
+            <th>Commisioned</th>
+            <th>Price</th>
+            <th>Observation</th>
+            <th>Additional</th>
             <th>Edit</th>
             <th>Delete</th>
           </tr>
@@ -55,7 +64,8 @@ const ListTodos = () => {
           </tr> */}
           {todos.map((todo) => (
             <tr key={todo.todo_id}>
-              <td>{todo.description}</td>
+              <td>{todo.amount}</td>
+              <td>{todo.title}</td>
               <td>
                 <EditTodo todo={todo} />
               </td>
