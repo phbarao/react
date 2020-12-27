@@ -1,0 +1,45 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: #4b4b4b;
+  text-align: center;
+}
+
+body,
+button,
+textarea {
+  font-family: sans-serif;
+  text-decoration: none;
+}
+
+h1 {
+  margin-bottom: 10px;
+}
+
+a {
+  display: block;
+  text-decoration: none;
+  color: aqua;
+  border-top: 1px solid aqua;
+  padding: 10px;
+}
+
+a:hover {
+  background-color: rgb(38, 38, 38);
+}
+
+strong {
+  display: block;
+  font-size: 40px;
+}
