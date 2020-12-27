@@ -6,8 +6,7 @@ import logoImg from '../assets/images/logo.png';
 import '../styles/pages/receipt.css';
 
 function Receipt() {
-  const [title, setTitle] = useState('__________');
-  const [patient, setPatient] = useState('-----');
+  const [dentist, setDentist] = useState('__________');
   const [description, setDescription] = useState(
     'Serviços de prótese dentária'
   );
@@ -16,43 +15,40 @@ function Receipt() {
   return (
     <div className="container">
       <div className="receipt-preview">
-        <header className="receipt-header">
+        <header className="receipt-header center">
           <img src={logoImg} alt="Pedro Prótese Dentária" className="logo" />
+
           <div className="light-text">
-            <h3>Manoel Pedro da Silva Nunes (TPD 412)</h3>
+            <h3>(TPD 412)</h3>
             <p>Rua Francisco Ribas, 1198. Ponta Grossa-PR</p>
             <span className="boost">(42) 3025-4014 / (42) 99860-1968</span>
           </div>
         </header>
 
         <main>
-          <div className="top-left">
+          <div className="top-left center">
             <strong className="main-title">Recibo:</strong>
 
             <p className="light-text">
-              Recebemos de: <span className="boost">{title}</span> os valores
+              Recebemos de: <span className="boost">{dentist}</span> os valores
               descritos abaixo:
             </p>
 
-            <table className="items">
+            <table className="items center">
               <thead>
-                <th>Dentista</th>
                 <th>Descrição</th>
-                <th>Paciente</th>
                 <th>valor</th>
               </thead>
 
               <tbody>
-                <td>---</td>
                 <td>{description}</td>
-                <td>{patient}</td>
                 <td>{`R$ ${price},00`}</td>
               </tbody>
             </table>
           </div>
         </main>
 
-        <footer className="footer">
+        <footer className="footer center">
           <div className="footer-left">
             <h3>Recebido por: </h3>
             <p>Manoel Pedro da Silva Nunes</p>
@@ -65,13 +61,13 @@ function Receipt() {
         </footer>
       </div>
 
-      <form className="form">
+      <form className="form center">
         <input
           type="text"
           // value={title}
           placeholder="Nome do Dentista ou Clínica"
           required
-          onChange={(e) => setTitle(e.target.value)}
+          onChange={(e) => setDentist(e.target.value)}
         />
 
         <input
@@ -79,13 +75,6 @@ function Receipt() {
           value={description}
           required
           onChange={(e) => setDescription(e.target.value)}
-        />
-
-        <input
-          type="text"
-          // value={price}
-          placeholder="Paciente"
-          onChange={(e) => setPatient(e.target.value)}
         />
 
         <input
