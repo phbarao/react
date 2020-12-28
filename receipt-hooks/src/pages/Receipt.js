@@ -1,14 +1,14 @@
-import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 
-import logoImg from "../assets/images/logo.png";
+import logoImg from '../assets/images/logo.png';
 
-import "../styles/pages/receipt.css";
+import '../styles/pages/receipt.css';
 
 function Receipt() {
-  const [dentist, setDentist] = useState("__________");
+  const [dentist, setDentist] = useState('__________');
   const [description, setDescription] = useState(
-    "Serviços de prótese dentária"
+    'Serviços de prótese dentária'
   );
   const [price, setPrice] = useState(0);
 
@@ -20,7 +20,6 @@ function Receipt() {
 
           <div className="light-text">
             <h3>(TPD 412)</h3>
-
             <p>Rua Francisco Ribas, 1198. Ponta Grossa-PR</p>
             <span className="boost">(42) 3025-4014 / (42) 99860-1968</span>
           </div>

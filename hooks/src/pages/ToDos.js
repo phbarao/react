@@ -44,11 +44,11 @@ function Counter() {
         </button>
       </form>
 
-      <ol>
+      <ul>
         {todo.map((t) => (
           <li key={t}>{t}</li>
         ))}
-      </ol>
+      </ul>
 
       <Link to="/" className="home">
         Voltar para página inicial
